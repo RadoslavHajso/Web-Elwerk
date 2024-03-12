@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(242, 242, 242);
+    color: black;
+}
+
+:root {
+    --bg-color:  #1d2228;;
+    --second-bg-color: #323946;
+    --header-bg-color:  rgb(22, 22, 22);
+    --wine--color: #7B0323;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--header-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: .3rem solid rgb(219, 219, 219);
+    color: white ;
+}
+
+
+/* header  */
+.logo {
+    font-size: 600;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 0.9rem;
+    font-weight: 600;  
+}
+
+.navbar a:hover { 
+    color: gainsboro;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.logo img {
+    width: auto;
+    height: 40px;
+}
+.navbar > div:first-child {
+    margin-right: auto;
+}
+
+.navbar > div:first-child a {
+    margin-right: 4rem;
+}
+
+.language-selector {
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background: var(--header-bg-color);
+    border: 1px solid gainsboro;
+    padding-left: 0%;
+    padding-right: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    flex-direction: row;
+}
+
+.language-option {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    padding: 5%;
+}
+
+.language-option img {
+    width: 2.4rem; 
+    height: auto; 
+    cursor: pointer;
+    margin-right: 1rem; 
+}
+
+.language-selector:hover .language-dropdown {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+/* header media size */
+@media (max-width: 935px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--header-bg-color);
+        border-top: .1rem solid rgb(219, 219, 219);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.6rem;
+        margin: 3rem 0;
+    }
+    .navbar > div:last-child .language-selector {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .navbar > div:last-child .language-dropdown {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        padding: 0; 
+        border: none;   
+    }
+
+    .navbar > div:last-child .language-option {
+        padding: 0 0rem; 
+    }
+}

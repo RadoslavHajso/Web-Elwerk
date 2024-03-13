@@ -35,3 +35,38 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
+
+//animation icons
+//1
+const animationOptions = {
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/icons/Team.json' 
+};
+
+const anim = lottie.loadAnimation(animationOptions);
+
+//2
+const animationOptionstwo = {
+    container: document.getElementById('lottie-animationtwo'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/icons/Badge.json'
+};
+
+const animtwo = lottie.loadAnimation(animationOptionstwo);
+
+//3
+ const animationOptionsthree = {
+    container: document.getElementById('lottie-animationthree'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/icons/Partnership.json'
+};
+
+const animthree = lottie.loadAnimation(animationOptionsthree);

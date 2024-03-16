@@ -9,10 +9,13 @@
     <link rel="icon" href="images/Icon.png">
 
     <link rel="stylesheet" href="style.css">
-
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+
+
 </head>
 <body>
     <header class="header">
@@ -63,11 +66,9 @@
         </section>
 
 
-
         <!-- home-more section -->
         <section class="choice" id="more">
             <div class="white-space"></div>
-            <div class="choice-background-overlay"></div>
             <div class="choice-title-text">
                 <h1>Prečo si vybrať firmu Elwerk</h1>
             </div>
@@ -121,9 +122,72 @@
                 </div>
             </div>
         </section>
-
         
+        <!-- about section -->
+        <section class="about" id="about">
+           <div class="white-space"></div>
+            <div class="title-img">
+                <div class="title-text">
+                    <h1>O nás</h1>
+                </div>
+            </div>
+        
+                
+            <div class="about-content">
+                <div class="about-first-text">
+                    <p>Firma ELwerk s.r.o sa od svojho vzniku v roku 2018 venuje komplexným elektroinštalačným prácam. Pôsobíme nie len na tuzemskom ale od roku 2022 aj na zahraničnom trhu prevažne vRakúsku, Nemecku a Českej republike.</p>
+                </div>
 
+                <div class="about-left-content">
+
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <a href="/images/img-slider1.png" data-fancybox="gallery"><img src="/images/img-slider1.png"></a>
+                        </div>
+                      
+                        <div class="mySlides fade">
+                            <a href="images/img-slider2.png" data-fancybox="gallery"><img src="images/img-slider2.png"></a>
+                        </div>
+                      
+                        <div class="mySlides fade">
+                            <a href="images/img-slider3.png" data-fancybox="gallery"><img src="images/img-slider3.png"></a>
+                        </div>
+                      
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                
+                </div>
+
+
+                <div class="about-right-content"> 
+                    <div class="about-second-text">
+                    <p>
+                        Za 6 ročnú históriu našej firmy máme za sebou množstvo projektov z rôznych oblastí elektromontážnych a elektroinštalačných prác ako napríklad obchodných priestorov, kancelárskych priestorov, komerčných budov, obchodných centier, bytovej a domovej inštalácie, priemyselné a skladové haly, industriálnej elektroinštalácie a iné.
+                    </p>
+
+                </div>
+                </div>
+
+                <div class="about-first-text">
+                    <p>Vykonávame všetky komplexné elektromontážne a elektroinštalačné práce od prípravy káblových tras cez natiahnutie káblových rozvodov až po samotné zapojenie všetkých prístrojov a rozvádzačov.</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>     
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

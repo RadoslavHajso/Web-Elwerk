@@ -265,13 +265,9 @@ body {
 
 
 
-
 /*choice section*/
 .choice {
     min-height: 100vh;
-    padding: 10rem 0% 2rem;
-    /* background-color: #181A1B; */
-    /* background-color: #292D33; */
     position: relative;
 }
 
@@ -279,28 +275,18 @@ body {
     min-height: 36px;
 }
 
-.choice-background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/white-bg.jpg");
-    background-size: cover;
-    opacity: 0.25;
-}
 .choice-title-text {
     text-align: center;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: white;
     z-index: 2; 
     max-width: 60%;
     margin-bottom: 2%;
     background-color: var(--wine--color);
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 8px;
     z-index: 2;
 }
@@ -352,7 +338,6 @@ body {
 }
 
 .choice-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.7rem;
     font-weight: 500;
     margin-bottom: 10%;
@@ -362,4 +347,163 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+
+
+
+/*about section*/
+.about {
+    min-height: 100vh;
+    position: relative;
+}
+
+.title-img {
+    height: 25rem;
+    position: relative;
+    background-image: url("images/title-bg-blur2.jpg");
+    background-color: rgb(85, 85, 85);
+    /* background-color: rgb(61, 61, 61); */
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: center; */
+}
+
+.title-text {
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    color: white;
+    z-index: 2;
+}
+
+.about-content {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+
+.about-first-text {
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 4%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+}
+
+.about-left-content{
+    width: 26%;
+    margin-left: 20%;
+}
+
+.about-right-content{
+    width: 46%;
+    margin-right: 8%;
+    /* align-self: center; */
+}
+
+.about-second-text {
+    text-align: left;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 700;
+    left: 18%;
+    top: 30%;
+    margin-right: 30%;
+    background-color: #161616;
+    color: white;
+    border-bottom: 0.8rem solid #7B0323;
+    border-radius: 4px;
+    padding: 3%;
+    box-shadow: 0 0 3rem  rgb(90, 90, 90);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #7B0323;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.mySlides img {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-left-content{
+        width: 100%;
+    }
+    .about-right-content {
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 }

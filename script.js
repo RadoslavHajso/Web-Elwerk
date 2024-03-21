@@ -72,32 +72,46 @@ const animtwo = lottie.loadAnimation(animationOptionstwo);
 const animthree = lottie.loadAnimation(animationOptionsthree);
 
 
- let slideIndex = 1;
-    showSlides(slideIndex);
+let slideIndex = {
+    'slider1': 1,
+    'slider2': 1,
+    'slider3': 1,
+    'slider4': 1,
+    'slider5': 1,
+};
 
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+showSlides(slideIndex.slider1, 'slider1');
+showSlides(slideIndex.slider2, 'slider2');
+showSlides(slideIndex.slider3, 'slider3');
+showSlides(slideIndex.slider4, 'slider4');
+showSlides(slideIndex.slider5, 'slider5');
+
+
+
+function plusSlides(n, sliderId) {
+    showSlides(slideIndex[sliderId] += n, sliderId);
+}
+
+function currentSlide(n, sliderId) {
+    showSlides(slideIndex[sliderId] = n, sliderId);
+}
+
+function showSlides(n, sliderId) {
+    let i;
+    let slides = document.getElementById(sliderId).getElementsByClassName("mySlides");
+    let dots = document.getElementById(sliderId).getElementsByClassName("dot");
+    if (n > slides.length) { 
+        slideIndex[sliderId] = 1;  
     }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
+    if (n < 1) { 
+        slideIndex[sliderId] = slides.length; 
     }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex[sliderId] - 1].style.display = "block";
+    dots[slideIndex[sliderId] - 1].className += " active"; 
+}
